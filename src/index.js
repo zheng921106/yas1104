@@ -2,7 +2,7 @@ export default {
 	async fetch(request, env, ctx) {
 		try {
 			// 从 D1 数据库中获取视频数据
-			const { results } = await env.DB.prepare('SELECT * FROM videos').all();
+			const { results } = await env.DB.prepare('SELECT * FROM data_videos').all();
 
 			// 生成 HTML 页面
 			let html = `<!DOCTYPE html>
